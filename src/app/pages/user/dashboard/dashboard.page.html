@@ -143,7 +143,7 @@
             <ion-grid *ngIf="platform.width() >= 768">
               <ion-row class="ion-justify-content-start">
                 <ion-col class="ion-align-self-center grid-col" *ngFor="let journey of journeys; trackBy: customTrackBy" [hidden]="!((journey.matrix_string[0][0].toLowerCase().includes(searchKeyword.toLowerCase()) || journey.resource['en-US'].value[0].toLowerCase().includes(searchKeyword.toLowerCase())))" size="auto">
-                  <ion-card class="grid-program-card" (click)="openProgram($event, journey)">
+                  <ion-card id="journey-card" class="grid-program-card" (click)="openProgram($event, journey)">
                     <ion-card-header class="ion-no-padding">
                       <div class="program-photo-container">
                         <img class="program-photo" [src]="(journey.assets && journey.assets.length && journey.assets[0]) | background: journey._id" />
