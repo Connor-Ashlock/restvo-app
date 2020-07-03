@@ -11,7 +11,7 @@
         <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title id="show-event-title" *ngIf="moment && moment.matrix_string" (click)="toggleSpecialAccess($event)" class="ion-text-wrap">{{moment.matrix_string[0][0]}}<ion-note *ngIf="hasSpecialPrivilege" class="ion-align-items-baseline"><ion-icon [name]="(showSpecialAccess ? 'chevron-up-outline' : 'chevron-down-outline')"></ion-icon></ion-note></ion-title>
+    <ion-title id="show-event-title" *ngIf="moment && moment.matrix_string" (click)="toggleSpecialAccess($event)" class="ion-text-wrap">{{moment.matrix_string[0][0]}}<ion-note id="more-info" *ngIf="hasSpecialPrivilege" class="ion-align-items-baseline"><ion-icon [name]="(showSpecialAccess ? 'chevron-up-outline' : 'chevron-down-outline')"></ion-icon></ion-note></ion-title>
     <ion-buttons slot="end">
       <div *ngIf="userData.user && ['owner','admin','staff'].indexOf(userData.user.role) > -1">
         <ion-button *ngIf="mode === 'slider'" (click)="mode = 'list'; currentView = 'list'">
@@ -104,7 +104,7 @@
     </ion-item>
     <div *ngIf="!joinDisabled">
       <!--Already Joined-->
-      <ion-item *ngIf="hasParticipantAccess && !hasOrganizerAccess && !hasLeaderAccess" (click)="moreParticipantOptions()" lines="none">
+      <ion-item id="participant-dropdown" *ngIf="hasParticipantAccess && !hasOrganizerAccess && !hasLeaderAccess" (click)="moreParticipantOptions()" lines="none">
         <ion-icon name="person" slot="start" color="danger"></ion-icon>
         <div class="ion-text-wrap message-container">
           <ion-label class="ion-margin-top">You are a {{participantLabel}}</ion-label>

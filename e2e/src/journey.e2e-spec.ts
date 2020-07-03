@@ -73,4 +73,13 @@ describe('navigate around the maintab', () => {
         await me.waitUntilVisible();
         expect(app.headerIsPresent('#showfeature-header')).toBeTruthy();
     });
+
+    it('should leave the journey', async () => {
+        await maintab.clickTabButton('#more-info');
+        await me.waitUntilVisible();
+        await maintab.clickTabButton('#participant-dropdown');
+        await me.waitUntilVisible();
+
+        // expect(app.headerIsPresent('#showfeature-header')).toBeTruthy();
+    });
 });
