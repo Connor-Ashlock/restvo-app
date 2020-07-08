@@ -7,13 +7,13 @@ exports.config = {
   allScriptsTimeout: 110000,
   specs: [
     //'./src/**/*.e2e-spec.ts' // run all the testing scripts
-    './src/app.e2e-spec.ts' // run this specific script
+    './src/david-user-invite.e2e-spec.ts' // run this specific script
   ],
   capabilities: {
     'browserName': 'chrome'
   },
   directConnect: true,
-  baseUrl: 'http://localhost:4200/',
+  baseUrl: 'http://localhost:4201/',
   framework: 'jasmine',
   SELENIUM_PROMISE_MANAGER: false,
   jasmineNodeOpts: {

@@ -42,7 +42,7 @@
                 "glob": "*",
                 "input": "src/assets/json",
                 "output": ".well-known"
-              },
+              }
             ],
             "styles": [
               {
