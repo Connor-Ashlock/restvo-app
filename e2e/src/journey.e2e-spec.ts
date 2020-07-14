@@ -75,9 +75,9 @@ describe('navigate around the maintab', () => {
     });
 
     it('should leave the journey', async () => {
-        await app.clickTabButton('#more-info');
+        await maintab.clickElement('#more-info');
         await me.waitUntilVisible();
-        await app.clickTabButton('#participant-dropdown');
+        await maintab.clickElement('#participant-dropdown');
         await me.waitUntilVisible();
     });
 });
