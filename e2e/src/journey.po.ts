@@ -109,10 +109,6 @@ export class MaintabPage extends PageObjectBase {
     clickTabButton(button) {
         this.clickButton(button);
     }
-
-    clickElement(element) {
-      this.clickElement(element);
-    }
 }
 export class ShowfeaturePage extends PageObjectBase {
     constructor() {
@@ -129,6 +125,10 @@ export class ShowfeaturePage extends PageObjectBase {
 
     clickSigninButton(button) {
         this.clickButton(button);
+    }
+
+    clickTitle(el) {
+      this.clickElement(el);
     }
 }
 

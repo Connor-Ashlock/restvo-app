@@ -12,7 +12,7 @@ import {
     CreateFeaturePage,
     AboutPage,
     PreferencesPage
-} from './journey.po';
+} from './app.po';
 import { browser } from 'protractor';
 
 describe('navigate around the maintab', () => {
@@ -75,9 +75,9 @@ describe('navigate around the maintab', () => {
     });
 
     it('should leave the journey', async () => {
-        await maintab.clickElement('#more-info');
+        await showfeature.clickTitle('#more-info');
         await me.waitUntilVisible();
-        await maintab.clickElement('#participant-dropdown');
-        await me.waitUntilVisible();
+        // await maintab.clickElement('#participant-dropdown');
+        // await me.waitUntilVisible();
     });
 });
