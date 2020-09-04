@@ -94,6 +94,7 @@ export class PreferencesPage implements OnInit, OnDestroy {
       if (!this.modalPage && this.platform.width() >= 992) {
           this.router.navigate([{ outlets: { sub: ['create', data] }}]);
       } else { // create other Activities
+          data.modalPage = true;
           this.momentService.editMoment(data);
       }
   }
