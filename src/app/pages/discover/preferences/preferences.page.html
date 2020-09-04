@@ -17,11 +17,11 @@
             <ion-spinner name="dots"></ion-spinner>
         </ion-row>
     </ion-grid>
-  <ion-list *ngIf="organizer"> 
+  <ion-list *ngIf="organizer">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-card (click)="createMoment()">
+          <ion-card [ngClass]="{'ion-no-margin': platform.width() < 768}" (click)="createMoment()">
             <ion-card-content class="onboarding-card">
               <img src="assets/img/plan.svg">
               <h4 class="text-center">Create your own</h4>
@@ -29,7 +29,7 @@
           </ion-card>
         </ion-col>
         <ion-col>
-          <ion-card (click)="chooseOnboardingProcess()">
+          <ion-card [ngClass]="{'ion-no-margin': platform.width() < 768}" (click)="chooseOnboardingProcess()">
             <ion-card-content class="onboarding-card">
               <img src="assets/img/template.svg">
               <h4 class="text-center">Use a template</h4>
