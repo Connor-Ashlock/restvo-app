@@ -10,3 +10,34 @@ app-preferences {
     height: 125px;
   }
 }
+
+.onboarding-process-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & img {
+      border-radius: 50%;
+    }
+
+    & .text {
+      margin-left: 15px;
+    }
+  }
+
+  &-action {
+    margin-left: auto;
+  }
+}
