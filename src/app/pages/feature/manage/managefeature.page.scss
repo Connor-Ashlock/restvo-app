@@ -45,13 +45,11 @@ app-managefeature {
 
   .selected {
     background-color: var(--ion-color-primary) !important;
-    color: white !important;
-  }
 
-  // .selected * {
-  //   color: white;
-  //   background-color: var(--ion-color-primary) !important;
-  // }
+    &-item {
+      color: white !important;
+    }
+  }
 
   ion-router-outlet {
     border-left: 1px solid var(--ion-color-lightgrey);
